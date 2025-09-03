@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Coding Poll</title>
+    <title>Coding Survey</title>
     <style>
       body{background-color: #242830; text-align: center;}
       button { margin: 0.3rem; padding: 0.5rem 1rem; border-radius: 8px; border: 2.5px solid #ecc92ce8; background-color: #242830; font-family: "ui-monospace" ,monospace; color: #ecc92ce8; }
@@ -15,24 +15,26 @@
       strong{font-family: "ui-monospace" ,monospace; color: #ecc92ce8;}
       welcome{text-align: left; font-family: "ui-monospace" ,monospace; color: whitesmoke;}
       .center {margin: auto; width: 500px;}
+      .input {margin: 0.4rem; padding: 0.25rem 0.5rem; border-radius: 8px; border: 2px solid whitesmoke; background-color: #242830; font-family: "ui-monospace" ,monospace; color: whitesmoke; }
+    .select{background:#15171a;border:2px solid var(--muted);padding:8px 10px;border-radius:10px;color:var(--muted);min-width:180px}
     </style>
   </head>
   <body>
     <div class="center">
-    <h1>Coding Poll</h1>
+    <h1>Coding Survey</h1>
     <br>
-    <h2>Welcome to Coding Poll</h2>
+    <h2>Welcome to Coding Survey</h2>
     <br>
     <welcome>
-    <p><strong>Before starting the poll:</strong></p>
-    <p>1. This poll is anonymous <strong>(I won't ask for email, name etc.)</strong></p>
-    <p>2. The answers are just for the project <strong>(Disclaimer! They may not represent the truth!)</strong></p>
+    <p><strong>Before starting the Survey:</strong></p>
+    <p>1. This Survey is anonymous <strong>(I won't ask for email, name etc. because most likely it won't be safe)</strong></p>
+    <p>2. The answers are just for the project <strong>(So, please no fighting about the Distros, Programming Languages, etc.)</strong></p>
     <p>3. Please answer to <strong>all</strong> the questions</p>
     <p>4. Use the site as instructed <strong>(Don't do anything unethical or illegal)</strong></p>
     </welcome>
     <br>
     <form id="form-os">
-      <p><strong>Choose a OS:</strong></p>
+      <p><strong>1) What is your favourite OS?</strong></p>
       <input type="radio" id="os1" name="os" value="1">
       <label for="os1">Windows</label><br>
 
@@ -41,28 +43,54 @@
 
       <input type="radio" id="os3" name="os" value="3">
       <label for="os3">Linux</label><br>
-      
+
       <input type="radio" id="os4" name="os" value="4">
-      <label for="os4">Other </label>
-      <input type="text" id="os5" name="os"><br>
+      <label for="os4">Other</label><br>
+    </form>
+    <br>
+    <form id="form-distro">
+      <p><strong>2) What is your favourite Linux Distro?</strong></p>
+      <input class="input" type="text" id="distro" placeholder="Ubuntu, Fendora, Arch, etc."><br>
     </form>
     <br>
     <form id="form-lang">
-      <p><strong>Choose a Programming Language:</strong></p>
-      <input type="radio" id="lang1" name="lang" value="1">
-      <label for="ex1">Python</label><br>
-
-      <input type="radio" id="lang2" name="lang" value="2">
-      <label for="lang2">Mac</label><br>
-
-      <input type="radio" id="lang3" name="lang" value="3">
-      <label for="lang3">Linux</label><br>
-      
-      <input type="radio" id="lang4" name="lang" value="4">
-      <label for="lang4">Other </label>
-      <input type="text" id="lang5" name="lang"><br>
+      <p><strong>3) What is your favourite Programming Language?</strong></p>
+      <input class="input" type="text" id="lang" placeholder="Python, Java, C++, etc."><br>
     </form>
     <br>
+    <form id="form-area">
+      <p><strong>4) What is your Development area you work on?</strong></p>
+      <select class="select" id="area">
+        <option value="">-- Select --</option>
+        <option> Frontend</option>
+        <option> Backend</option>
+        <option> Fullstack</option>
+        <option> DevOps</option>
+        <option>  Data Science</option>
+        <option> Mobile</option>
+        <option> Embedded</option>
+        <option> Other</option>
+      </select>
+    </form>
+    <br>
+    <form id="form-level">
+          <p><strong>5) What is your Experience level?</strong></p>
+          <select class="select" id="experience">
+            <option value="">-- Select --</option>
+            <option>Student</option>
+            <option>Junior (0-2 yrs)</option>
+            <option>Intermediate (2-5 yrs)</option>
+            <option>Senior (5+ yrs)</option>
+            <option>Hobbyist</option>
+          </select>
+    </form>
+    <br>
+    <form id="editor">
+            <p><strong>6) Preferred editor / IDE</strong></p>
+            <input class="input" id="editor" placeholder="VS Code, IntelliJ, Vim, etc.">
+    </form>
+    <br>
+    <h2></h2>
     <button onclick="submit()" id="runBtn">Submit</button>
     <button onclick="viewAnswer()" id="sourceBtn">View Poll Answers</button>
     </div>
