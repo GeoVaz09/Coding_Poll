@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Results</title>
+    <style>
+      body { background-color: #242830; font-family: monospace; color: whitesmoke; text-align: center; }
+      table { margin: auto; border-collapse: collapse; width: 80%; }
+      th, td { border: 1px solid #ecc92ce8; padding: 8px; }
+      th { background-color: #333; color: #ecc92ce8; }
+      tr:nth-child(even) { background-color: #2f343f; }
+      a { color: #ecc92ce8; }
+    </style>
+  </head>
+  <body>
+    <h1>Survey Answers</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>OS</th>
+          <th>Distro</th>
+          <th>Language</th>
+          <th>Area</th>
+          <th>Experience</th>
+          <th>Editor</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for ans in answers %}
+        <tr>
+          <td>{{ ans.os }}</td>
+          <td>{{ ans.distro }}</td>
+          <td>{{ ans.lang }}</td>
+          <td>{{ ans.area }}</td>
+          <td>{{ ans.experience }}</td>
+          <td>{{ ans.editor }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br>
+    <a href="/survey">← Back to Survey</a>
+  </body>
+</html>
