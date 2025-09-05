@@ -1,4 +1,6 @@
 # Coding_Poll
-A poll website for coding
+A poll website for coding with 6 questions.
 
-https://geovaz09.github.io/Coding_Poll/
+Made with Flask/Html/Css/JavaScript
+
+Tell me your options in the [Coding Poll](https://geovaz09.pythonanywhere.com/survey)
